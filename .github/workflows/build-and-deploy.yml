@@ -56,4 +56,4 @@ jobs:
     - name: Display structure of downloaded files
       run: ls -R
     - name: Deploy site to S3 bucket
-      run: aws s3 sync dist/browser s3://florian.lippisch.eu --delete    
+      run: aws s3 sync ./deploy_dist/aboutme/browser s3://florian.lippisch.eu --delete    
