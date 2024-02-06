@@ -1,0 +1,17 @@
+<div class="main-content" *ngIf="!loading">
+    <div class="about-head">
+      <div>
+        <img src="assets/fli_600x600.png" class="profile-pic">
+      </div>
+      <div>
+        <div class="mat-h1 head-name">{{ cv.name }}</div>
+        <div class="subttl">{{ cv.title }}</div>
+        <div class="key-skills">
+          <div class="skill" *ngFor="let skill of cv.keySkills">{{skill}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="summary">
+      {{ cv.summary }}
+    </div>
+  </div> 

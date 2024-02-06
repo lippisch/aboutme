@@ -1,0 +1,42 @@
+.about-head {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+}
+
+.head-name {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+.subttl {
+    color: #888;
+    font-size: 14pt;
+}
+
+.key-skills {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .skill {
+        font-size: 10pt;
+        background-color: rgb(213, 218, 213);
+        border: 1px solid #888;
+        color: #333;
+        padding: 3px 5px;
+        border-radius: 8px;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+}
+
+.summary {
+    margin-top: 20px;
+    line-height: 1.8em;
+
+}

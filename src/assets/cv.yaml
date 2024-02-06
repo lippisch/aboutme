@@ -1,0 +1,27 @@
+name: Florian Lippisch
+title: Software Engineering Leader
+summary: "Accomplished leader with over 15 years of software engineering leadership experience, uniquely combining 
+  technical acumen with business savvy. Strong expertise in building web applications and scalable microservice architectures 
+  in the cloud. Advocate for DevOps principles, including agile methodologies like Scrum and Kanban. Passionate about collaborating 
+  with engineers, stakeholders, and customers to deliver exceptional value. Excels at building and nurturing high-performing teams, 
+  embracing new technologies and innovative approaches to refine software development. Skilled in driving change and able to
+   transform challenges into opportunities for growth and progress."
+keySkills:
+- Leading Distributed Teams
+- Project Management
+- Talent Management
+- Risk Management
+- DevOps
+- Microservice Architecture
+- Web Technologies
+- System Integration
+- SDLC
+jobs:
+- company: NetApp
+  time: "Feb. 2022 - Dec. 2023"
+  title: Director, IT Shared Services
+  info: 
+    - Led a global delivery organization providing shared services to other teams, such as DevOps Center of Excellence, Enterprise Integration, API Governance, and others. Fostered a culture of modern agile DevOps teams, delivering value continuously, experimenting and learning rapidly, with safety as a prerequisite, to make people awesome.
+    - Defined and implemented software engineering best practices, combining an agile Kanban process, fully automated CI/CD pipelines and a cloud-native architecture framework to modernize the custom application landscape.
+    - The framework included a collection of open-source technologies, architectural patterns, and training. This enabled development teams to migrate legacy applications on to a containerized, microservice environment providing API’s as a service to other teams. Effectively reducing release cycle time to weekly or less, increasing stability and reducing operational cost.
+    - Successfully implemented a new enterprise integration strategy using Kafka and microservices, for high performance data integration. In our first use-case, an integration between Oracle CPQ and Snowflake, the throughput was increased by 10x and operating cost was significantly reduced compared to the legacy integration.
