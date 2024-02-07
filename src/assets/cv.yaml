@@ -7,21 +7,68 @@ summary: "Accomplished leader with over 15 years of software engineering leaders
   embracing new technologies and innovative approaches to refine software development. Skilled in driving change and able to
    transform challenges into opportunities for growth and progress."
 keySkills:
-- Leading Distributed Teams
-- Project Management
-- Talent Management
-- Risk Management
-- DevOps
-- Microservice Architecture
-- Web Technologies
-- System Integration
-- SDLC
+  - Leading Distributed Teams
+  - Project Management
+  - Risk Management
+  - SDLC
+  - DevOps
+  - Agile Principles
+  - Microservice Architecture
+  - Web Technologies
+  - System Integration
 jobs:
 - company: NetApp
-  time: "Feb. 2022 - Dec. 2023"
-  title: Director, IT Shared Services
-  info: 
-    - Led a global delivery organization providing shared services to other teams, such as DevOps Center of Excellence, Enterprise Integration, API Governance, and others. Fostered a culture of modern agile DevOps teams, delivering value continuously, experimenting and learning rapidly, with safety as a prerequisite, to make people awesome.
-    - Defined and implemented software engineering best practices, combining an agile Kanban process, fully automated CI/CD pipelines and a cloud-native architecture framework to modernize the custom application landscape.
-    - The framework included a collection of open-source technologies, architectural patterns, and training. This enabled development teams to migrate legacy applications on to a containerized, microservice environment providing API’s as a service to other teams. Effectively reducing release cycle time to weekly or less, increasing stability and reducing operational cost.
-    - Successfully implemented a new enterprise integration strategy using Kafka and microservices, for high performance data integration. In our first use-case, an integration between Oracle CPQ and Snowflake, the throughput was increased by 10x and operating cost was significantly reduced compared to the legacy integration.
+  logo: netapp.png
+  duration: 15 years, 2 month
+  roles:
+  - time: "Feb. 2022 - Dec. 2023"
+    title: Director, IT Shared Services
+    info: 
+      - Led a global delivery organization providing shared services to other teams, such as DevOps Center of Excellence, Enterprise Integration, API Governance, and others. Fostered a culture of modern agile DevOps teams, delivering value continuously, experimenting and learning rapidly, with safety as a prerequisite, to make people awesome.
+      - Defined and implemented software engineering best practices, combining an agile Kanban process, fully automated CI/CD pipelines and a cloud-native architecture framework to modernize the custom application landscape.
+      - The framework included a collection of open-source technologies, architectural patterns, and training. This enabled development teams to migrate legacy applications on to a containerized, microservice environment providing API’s as a service to other teams. Effectively reducing release cycle time to weekly or less, increasing stability and reducing operational cost.
+      - Successfully implemented a new enterprise integration strategy using Kafka and microservices, for high performance data integration. In our first use-case, an integration between Oracle CPQ and Snowflake, the throughput was increased by 10x and operating cost was significantly reduced compared to the legacy integration.
+  - time: "May. 2014 - Mar. 2022"
+    title: Sr. Manager, Service Enablement Solutions
+    info:
+      - "Managed the delivery teams for a portfolio of custom build applications, including small to large systems. Most teams have been distributed across US, Europe, and India. My primary responsibilities included the stakeholder management, building and maintaining the teams and providing architectural guidance."
+      - "Key Achievements: Re-build of the NetApp Support Site on a modern architecture, using agile methodologies. Pioneered true DevOps approach with our IT partners, building an outstanding, award-winning product and igniting a DevOps transformation in NetApp IT. Reduced the operational cost by 75%, moved from monthly to weekly releases with 3-5x more features per release. "
+      - "The site, which offers features such as case management, software downloads and online chat, was built as a Single-Page-Application using Angular, with a microservice backend built in Java/Spring-Boot. The microservice architecture allowed a rapid approach with 5 development teams. As we’ve been using fully automated CI/CD pipelines and a rich set of automated tests, the teams could develop and deploy in very short cycles, responding quickly to evolving requirements."
+  - time: "Nov. 2008 - Apr. 2014"
+    title: Software Engineering Manager (various positions)
+    info:
+      - "Managed the delivery teams for a portfolio of applications used primarily by the professional service (PS) organization. The delivery teams have been augmented with near-shore contractors."
+      - "Key Achievements: Developed and operated a solution to manage the end-to-end PS business, including order management, resource planning & scheduling, skill management, time tracking, project planning, partner management. The solution was built as a high-available web application in a modular monolithic architecture. Initially built for the EMEA region, it was rolled out globally later to more than 1000+ users, covering a 300m$ business. Through the years, the solution has grown rapidly replacing many custom tools, leading to a harmonization of the app landscape."
+      - "Implemented a reporting solution for PS, including data extraction, transformation, and visualization in a web application."
+      - "We worked closely with the business partners (product owners) to create the solution design, implement, test, and deploy new features. Our teams operated the systems, including 24/5 on-call support (You build it, you own it)."
+- company: pol IT GmbH
+  logo: pol-logo.png
+  duration: 3 years, 9 month
+  location: Munich
+  roles:
+  - time: "Feb. 2005 - Oct. 2008"
+    title: "Senior Solution Architect"
+    info: 
+    - "Designing custom applications for large enterprises. Leading a team of engineers including near-shore resources."
+    - "Highlights: Technical lead on a project building a CRM solution for a financial institute, with a rich-client application able to run off-line and a central server component, including a replication mechanism, reporting engine, Outlook Calendar integration and a high degree of customization capabilities. Key technologies used are Java, Eclipse RCP, Spring, Hibernate, HQL and Velocity."
+    - "Created and published the open-source web framework jWic (github.com/xwic/jWic), which allows developers to write stateful components in Java. Components can get nested, have events and are used similarly like a Swing app. The application code resides on the server, the view is dynamically updated using Ajax."
+    - "Created and published a Java based multi-dimensional in-memory Cube (github.com/xwic/cube), an ETL tool to perform data extraction, transformation and loading and a UI for data visualization and administration (github.com/xwic/etlgine). The framework included a server component to manage data loads, schedules, etc. "
+- company: Chorus GmbH
+  location: Munich
+  duration: 5 years, 10 month
+  logo: company.png
+  roles:
+  - time: "Apr. 1999 - Jan. 2005"
+    title: "Senior Developer"
+    info:
+    - "Lead engineer for web-based applications, including a project planning software for a large car manufacturing company and an online car-configurator."
+    - "Consultant for SAP-Lotus Domino integration projects"
+- company: Lippisch Software GmbH
+  duration: 1 year, 5 month
+  logo: lippisch-software-logo.png
+  roles:
+  - time: "Nov. 1997 - Mar. 1999"
+    title: "Software Developer"
+    info:
+    - "Contributed to the development of an ERP solution for small to medium businesses."
+    - "Provided customer support and troubleshooting"

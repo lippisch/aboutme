@@ -35,8 +35,72 @@
     border-radius: 90px;
 }
 
+.blockTitle {
+    margin-top: 40px;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
 .summary {
-    margin-top: 20px;
+    margin-top: 10px;
     line-height: 1.8em;
+}
+
+.jobHistory {
+    padding-bottom: 30px;
+    .company {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+                
+        padding: 10px;
+
+        &:hover {
+            box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+            0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 10px 0px rgba(0, 0, 0, 0.12)
+        }
+        .compHead {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            column-gap: 10px;
+        }
+        .compLogoBox {
+            min-height: 50px;
+        }
+        .compLogo {
+            width: 48px;
+        }
+        .compName {
+            font-size: 12pt;
+            
+        }
+        .compMultiName {
+            font-weight: 500
+        }
+        .compJobName {
+            font-size: 12pt;
+            font-weight: 500
+        }
+        .compDuration {
+            font-size: 10pt;
+            color: #666;
+        }
+        .role {
+            margin-bottom: 10px;
+            .roleTitle {
+                font-size: 12pt;
+                font-weight: 500
+            }
+            .roleTime {
+                color: #666;
+            }
+        }
+        .roleInfoHidden {
+            display: none;
+        }
+    }
 
 }

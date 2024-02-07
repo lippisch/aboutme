@@ -11,7 +11,35 @@
         </div>
       </div>
     </div>
+    <div class="blockTitle">Summary</div>
     <div class="summary">
       {{ cv.summary }}
+    </div>
+    <div class="blockTitle">Professional Experience</div>
+    <div class="jobHistory">
+      <div class="company" *ngFor="let job of cv.jobs">
+        <div class="compHead">
+          <div class="compLogoBox"><img [src]="'assets/' + job.logo" class="compLogo"></div>
+          <div>
+            <div class="compJobName" *ngIf="job.roles.length == 1">{{job.roles[0].title}}</div>
+            <div class="compName" [class.compMultiName]="job.roles.length != 1">{{job.company}}</div>
+            <div class="compDuration">{{job.duration}}</div>
+          </div>
+          <div></div>
+          <div>
+              <div class="role" *ngFor="let role of job.roles">
+                <div class="roleHeader">
+                  <div class="roleTitle" *ngIf="job.roles.length != 1">{{role.title}}</div>
+                  <div class="roleTime">{{role.time}}</div>
+                </div>
+                <div class="roleInfo">
+                  <ul>
+                    <li *ngFor="let inf of role?.info">{{inf}}</li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div> 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SiteInfoComponent } from './site-info/site-info.component';
 import { ContentService } from './services/content.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
