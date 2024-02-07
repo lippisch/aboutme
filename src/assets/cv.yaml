@@ -1,5 +1,7 @@
 name: Florian Lippisch
 title: Software Engineering Leader
+linkedIn: https://www.linkedin.com/in/lippisch/
+gitHub: https://github.com/lippisch
 summary: "Accomplished leader with over 15 years of software engineering leadership experience, uniquely combining 
   technical acumen with business savvy. Strong expertise in building web applications and scalable microservice architectures 
   in the cloud. Advocate for DevOps principles, including agile methodologies like Scrum and Kanban. Passionate about collaborating 
@@ -65,7 +67,7 @@ jobs:
     - "Consultant for SAP-Lotus Domino integration projects"
 - company: Lippisch Software GmbH
   duration: 1 year, 5 month
-  logo: lippisch-software-logo.png
+  logo: company.png
   roles:
   - time: "Nov. 1997 - Mar. 1999"
     title: "Software Developer"

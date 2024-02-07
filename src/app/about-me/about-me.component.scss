@@ -3,8 +3,15 @@
     grid-template-columns: 240px 1fr;
 }
 
+.socialLinks {
+    margin-top: 5px;
+    img {
+        width: 32px;
+        margin-right: 10px;
+    }
+}
 .head-name {
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 8px;
 }
 .subttl {

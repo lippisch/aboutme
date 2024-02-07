@@ -9,6 +9,10 @@
         <div class="key-skills">
           <div class="skill" *ngFor="let skill of cv.keySkills">{{skill}}</div>
         </div>
+        <div class="socialLinks">
+          <a [href]="cv.linkedIn" *ngIf="cv.linkedIn"><img src="assets/LI-In-Bug.png"></a>
+          <a [href]="cv.gitHub" *ngIf="cv.gitHub"><img src="assets/github-mark.png"></a>
+        </div>
       </div>
     </div>
     <div class="blockTitle">Summary</div>
