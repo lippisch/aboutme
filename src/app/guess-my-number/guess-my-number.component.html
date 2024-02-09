@@ -1,0 +1,47 @@
+<div class="main-content">
+    <div class="mat-h1">Guess My Number</div>
+    <div class="subtitle">This simple game demonstrates the use of an AWS Lambda function.</div>
+    <div class="mat-body">
+
+        <p>Welcome to the Guess My Number game! To get started, you need to think of
+            a number between 1 and 100. I will then try to guess the number in as few 
+            attempts as possible. When the number that I guess is not correct, let me 
+            know if the number you thought of is higher or lower than the one I guessed.
+        </p>
+
+        <div class="gameBox">
+            <div class="gameInstruction" *ngIf="gameState == 'NotStarted'">Think of a number between 1 and 100</div>
+            <div class="gameInstruction" *ngIf="gameState == 'Guessing'">I am thinking...</div>
+            <div class="gameInstruction" *ngIf="gameState == 'Waiting'">My guess is {{lastGuess}}. How close am I?</div>
+            <div class="gameInstruction" *ngIf="gameState == 'Finished'">Yay! I found the number {{lastGuess}} in just {{guessCount}} attempts.</div>
+            <div class="gameInstruction" *ngIf="gameState == 'Error'">{{lastError}}</div>
+
+            <div class="gameHistory">
+                <div *ngIf="gameState != 'NotStarted' && latestResponse?.numbers">
+                    History: 
+                    <span *ngFor="let n of latestResponse?.numbers">{{n}}, </span>
+                    <span>{{lastGuess}}</span>
+                </div>
+            </div>
+
+            <button mat-flat-button color="primary" (click)="onStartNewGame()" *ngIf="gameState == 'NotStarted'">Ready? Let's go!</button>
+            <div *ngIf="gameState != 'NotStarted' && gameState != 'Finished' && gameState != 'Error'">
+                <button mat-flat-button (click)="onLower()" [disabled]="gameState != 'Waiting'">My number is lower</button>
+                <button mat-flat-button color="primary" (click)="onFound()" [disabled]="gameState != 'Waiting'">Yay, that is my number!</button>
+                <button mat-flat-button (click)="onHigher()" [disabled]="gameState != 'Waiting'">My number is higher</button>
+            </div>
+            <button mat-flat-button color="primary" (click)="onRestart()" *ngIf="gameState == 'Finished' || gameState == 'Error'">One more try!!</button>
+        </div>
+    </div>
+
+    <div>
+        <div class="mat-h3 infobox">What is happening here?</div>
+        <div class="mat-body">
+            Requests are sent to the AWS Lambda function 'guessMyNumber', which will compute the next guess based on the 
+            history of guesses and the users latest response until the number is found. The function is exposed under 
+            <code>/api/guessMyNumber</code> on this domain, using the AWS API Gateway.
+        </div>
+    </div>
+
+</div>
+

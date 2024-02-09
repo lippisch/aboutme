@@ -1,6 +1,35 @@
-<mat-toolbar>
-    <button mat-button routerLink="/">Professional Experience</button> | 
-    <button mat-button routerLink="/siteinfo">About This Site</button>
-</mat-toolbar>
+<mat-sidenav-container class="main-container">
+    <mat-sidenav #sidenav role="navigation">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/" (click)="sidenav.close()">
+                <span class="nav-caption">Professional Experience</span>
+            </a>
+            <a mat-list-item routerLink="/gmn" (click)="sidenav.close()">
+                <span class="nav-caption">Play</span>   
+            </a>
+            <a mat-list-item routerLink="/siteinfo" (click)="sidenav.close()">
+                <span class="nav-caption">About This Site</span>
+            </a>
+          </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <div class="menu-container">
+                <!-- Hamburger menu icon for small screens -->
+                <button mat-icon-button class="menu-button" (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+                </button>
 
-<router-outlet></router-outlet>
+                <div class="menu-items">
+                    <button mat-button routerLink="/">Professional Experience</button> | 
+                    <button mat-button routerLink="/gmn">Play</button> |
+                    <button mat-button routerLink="/siteinfo">About This Site</button>
+                </div>
+            </div>
+
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -1,0 +1,24 @@
+
+.gameBox {
+    padding: 20px;
+    background-color: #eee;
+    border: 1px solid #999;
+
+    .gameInstruction {
+        font-size: 16pt;
+        margin-bottom: 20px;
+    }
+    .gameHistory {
+        color: #999;
+        margin-bottom: 20px;
+        min-height: 30px;
+    }
+    button {
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.infobox {
+    margin-top: 50px;
+}

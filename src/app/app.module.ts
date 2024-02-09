@@ -14,6 +14,10 @@ import { SiteInfoComponent } from './site-info/site-info.component';
 import { ContentService } from './services/content.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { GuessMyNumberComponent } from './guess-my-number/guess-my-number.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MainpageComponent,
     PageNotFoundComponent,
     AboutMeComponent,
-    SiteInfoComponent
+    SiteInfoComponent,
+    GuessMyNumberComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatToolbarModule,
     MatButtonModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},

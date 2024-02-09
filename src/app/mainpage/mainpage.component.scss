@@ -1,0 +1,48 @@
+.main-container {
+  background-color: #fff;
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .menu-items {
+    display: flex;
+  
+    // Hide menu items by default on small screens
+    @media (max-width: 599px) {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%; // Adjust as needed
+  
+    }
+  
+  }
+  
+  .menu-button {
+    display: none;
+  
+    @media (max-width: 599px) {
+      display: inline-block; // Show the button on small screens
+    }
+  }
+  
+  // Style adjustments for larger screens
+  @media (min-width: 600px) {
+    .menu-button {
+      display: none; // Hide the menu button on larger screens
+    }
+  
+    .menu-items {
+      display: flex; // Always show menu items on larger screens
+    }
+  }
