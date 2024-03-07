@@ -36,10 +36,13 @@
                   <div class="roleTitle" *ngIf="job.roles.length != 1">{{role.title}}</div>
                   <div class="roleTime">{{role.time}}</div>
                 </div>
-                <div class="roleInfo">
+                <div class="roleInfo" *ngIf="role.showDetails">
                   <ul>
                     <li *ngFor="let inf of role?.info">{{inf}}</li>
                   </ul>
+                </div>
+                <div *ngIf="!role.showDetails" (click)="role.showDetails = true" class="showDetailsLink">
+                  View Details...
                 </div>
               </div>
           </div>

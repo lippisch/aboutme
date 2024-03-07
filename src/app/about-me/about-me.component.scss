@@ -111,6 +111,16 @@
         .roleInfoHidden {
             display: none;
         }
+        .showDetailsLink {
+            font-size: 10pt;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: #66b;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
 }

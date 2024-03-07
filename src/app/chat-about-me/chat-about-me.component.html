@@ -1,0 +1,43 @@
+<div class="main-content">
+    <div class="mat-h1">Chat about me</div>
+    <div class="mat-body">
+        Welcome to the age of AI! You can perform a "virtual" interview with my AI Assistant
+        and ask questions about me and my experience.
+    </div>
+
+    <div class="chat-box mat-elevation-z4 mat-body">
+        <div class="startingUpArea" [class.errorState]="errorState" *ngIf="startingUp || errorState">
+            <span class="startingUpMsg" *ngIf="startingUp">We  are connecting you to the AI Assistant.</span>
+            <span class="startingUpMsg" *ngIf="errorState">Sorry, it seems that a problem occured:<br>{{errorMessage}}</span>
+          </div>
+        <div class="chat-area" #chatArea *ngIf="!startingUp && !errorState">
+            <div class="message received">
+                <span class="content">Hey there! I am Vilo, the virtual assistant created to provide you with 
+                    information about Florian. You can ask me questions about Florian's professional career and
+                    experience.</span>
+            </div>
+            <div *ngIf="chatHistory.length == 0 && !loading" class="quick-options">
+                <button mat-stroked-button (click)="quickStart('What is his most recent experience?')">What is his most recent experience?</button>
+                <button mat-stroked-button (click)="quickStart('Tell me about Florians leadership style')">Tell me about Florian's leadership style</button>
+            </div>
+            <div *ngFor="let msg of chatHistory" class="message" [ngClass]="{'received': !msg.sent, 'sent': msg.sent }">
+                <span *ngIf="msg.sent" class="content"
+                    [innerHTML]=" msg.prefix ? msg.prefix + msg.message : msg.message | lineBreak "></span>
+                <div *ngIf="!msg.sent" markdown [innerHTML]="msg.message | lineBreak" class="content"></div>
+            </div>
+            <div *ngIf="loading" class="message system-info"><mat-spinner [diameter]="20"></mat-spinner><span
+                    class="content">Typing...</span></div>
+            <div style="clear: both" *ngIf="chatHistory && chatHistory.length > 0"></div>
+            <button mat-stroked-button (click)="startOver()" *ngIf="chatHistory && chatHistory.length > 0">Clear
+                Conversation</button>
+        </div>
+        <div class="progBar">
+            <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+        </div>
+        <div class="input-area">
+            <textarea #msgInput type="text" placeholder="Type a message and use Ctrl+Enter to send..."
+                [(ngModel)]="chatText" (keydown)="checkForCtrlEnter($event)"></textarea>
+            <button class="send-button" (click)="sendMessage()" [disabled]="loading"><mat-icon>send</mat-icon></button>
+        </div>
+    </div>
+</div>

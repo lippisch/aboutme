@@ -18,6 +18,12 @@ import { GuessMyNumberComponent } from './guess-my-number/guess-my-number.compon
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { ChatAboutMeComponent } from './chat-about-me/chat-about-me.component';
+import { LineBreakPipe } from './pipes/line-break.pipe';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     PageNotFoundComponent,
     AboutMeComponent,
     SiteInfoComponent,
-    GuessMyNumberComponent
+    GuessMyNumberComponent,
+    ChatAboutMeComponent,
+    LineBreakPipe
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     BrowserAnimationsModule,
     MatIconModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
