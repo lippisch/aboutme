@@ -18,6 +18,8 @@ export class ChatAboutMeComponent {
   username = 'Anonymous'
 
   chatText: string = '';
+  incompleteCount = 0;
+  isIncomplete = false;
 
   chatHistory: ChatMessage[] = [];
   @ViewChild('chatArea', { static: false }) chatArea?: ElementRef;
@@ -27,13 +29,16 @@ export class ChatAboutMeComponent {
     private chatSvc: ChatAboutMeService,
     private router: Router,) {
 
-    this.startingUp = false;
     this.loading = false;
   }
 
   startOver() {
     this.conversationId = null;
     this.chatHistory = [];
+  }
+
+  consent() {
+    this.startingUp = false;
   }
 
   checkForCtrlEnter(event: KeyboardEvent): void {
@@ -106,7 +111,29 @@ export class ChatAboutMeComponent {
     }
 
     if (at.state == 'ready') {
-      this.loading = false;
+      if (at.missing) {
+        if (this.isIncomplete) {
+          this.incompleteCount++;
+        } else {
+          this.incompleteCount = 1;
+          this.isIncomplete = true;
+        }
+
+        if (this.incompleteCount > 10) {
+          this.errorMessage = 'AI API response incomplete';
+          this.errorState = true;
+          this.loading = false;
+        } else {
+          this.loading = true;
+          this.autoRefresh();
+          console.log('The response is incomplete, continue the call for another few seconds...')
+        }
+      } else {
+        this.loading = false;
+        this.isIncomplete = false;
+        this.incompleteCount = 0;
+      }
+
     } else {
       if (at.state == 'running') {
         this.loading = true;

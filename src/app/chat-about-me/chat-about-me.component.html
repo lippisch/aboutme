@@ -7,7 +7,17 @@
 
     <div class="chat-box mat-elevation-z4 mat-body">
         <div class="startingUpArea" [class.errorState]="errorState" *ngIf="startingUp || errorState">
-            <span class="startingUpMsg" *ngIf="startingUp">We  are connecting you to the AI Assistant.</span>
+            <div *ngIf="startingUp">
+                <div class="info-message">
+                    Please note that this is a technical demo, integrating the ChatGPT Assistant on this 
+                    site and feeding it with information from my CV. The answers you get may not be correct as
+                    the AI can 'hallucinate' and provide wrong information.
+                </div>
+                
+                <div class="info-button">
+                    <button mat-flat-button (click)="consent()">I understand</button>
+                </div>
+            </div>
             <span class="startingUpMsg" *ngIf="errorState">Sorry, it seems that a problem occured:<br>{{errorMessage}}</span>
           </div>
         <div class="chat-area" #chatArea *ngIf="!startingUp && !errorState">
@@ -26,7 +36,7 @@
                 <div *ngIf="!msg.sent" markdown [innerHTML]="msg.message | lineBreak" class="content"></div>
             </div>
             <div *ngIf="loading" class="message system-info"><mat-spinner [diameter]="20"></mat-spinner><span
-                    class="content">Typing...</span></div>
+                    class="content">Typing... (this may take even a minute or two)</span></div>
             <div style="clear: both" *ngIf="chatHistory && chatHistory.length > 0"></div>
             <button mat-stroked-button (click)="startOver()" *ngIf="chatHistory && chatHistory.length > 0">Clear
                 Conversation</button>
@@ -37,7 +47,7 @@
         <div class="input-area">
             <textarea #msgInput type="text" placeholder="Type a message and use Ctrl+Enter to send..."
                 [(ngModel)]="chatText" (keydown)="checkForCtrlEnter($event)"></textarea>
-            <button class="send-button" (click)="sendMessage()" [disabled]="loading"><mat-icon>send</mat-icon></button>
+            <button class="send-button" (click)="sendMessage()" [disabled]="loading || startingUp"><mat-icon>send</mat-icon></button>
         </div>
     </div>
 </div>

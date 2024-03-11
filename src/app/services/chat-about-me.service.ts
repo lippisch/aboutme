@@ -27,6 +27,7 @@ export class ChatResponse {
   conversationId?: string;
   state?: string;
   messages?: ChatResponseMessage[];
+  missing?: boolean;
 }
 
 export class ChatResponseMessage {
