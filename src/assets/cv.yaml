@@ -19,6 +19,19 @@ keySkills:
   - Web Technologies
   - System Integration
 jobs:
+- company: Celonis
+  duration: Since April 2024
+  logo: celonis.png
+  roles:
+  - time: "Since Feb. 2025"
+    title: Sr. Engineering Manager, Metadata Platform
+    info:
+      - Leading multiple teams, responsible for developing an abstraction layer for metadata services from the application layer, to provide encryption services and more flexibility
+  - time: "Apr. 2024 - Jan. 2025"
+    title: Sr. Engineering Manager, Data Platform Services
+    info:
+      - Led a team responsible for data platform services such as PostgreSQL, Object Storage, RabbitMQ and Redis in our cloud platform
+      - Formed the team and developed a strategy to abstract metadata services from the application layer to provide encryption services and increased flexibility
 - company: NetApp
   logo: netapp.png
   duration: 15 years, 2 month
